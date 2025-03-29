@@ -1,0 +1,195 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #f3f3f3, #dcdcdc); /* Soft gradient background */
+    color: #222; /* Default text color */
+}
+
+/* Full-Width Header */
+.home-header {
+    width: 100%;
+    background: linear-gradient(90deg, #ff4d4d, #ff6a00); /* Gradient background */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Home Page Content */
+.home-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+/* Heading */
+.H {
+    font-size: 55px;
+    text-align: center;
+    color: #ff4d4d;
+    text-shadow: 3px 3px 3px rgba(255, 77, 77, 0.5);
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+/* Sections */
+.e {
+    width: 82%;
+    margin-left: 8%;
+    margin-top: 1.5%;
+}
+
+/* Information Text */
+.s {
+    font-size: large;
+    font-weight: 700;
+    margin-left: 10%;
+    text-align: justify;
+    
+}
+
+.t {
+    margin-left: 10%;
+    font-size: small;
+    font-weight: 300;
+  
+    text-align: justify;
+}
+
+/* Features Section */
+.i {
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+.i h2 {
+    font-size: 24px;
+    color: #222;
+}
+
+.i ul {
+    margin-top: 10px;
+    list-style-type: square;
+}
+
+.i ul li {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Why Choose Us */
+.j {
+    margin-left: 30%;
+    margin-top: 20px;
+}
+
+.j h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.p {
+    font-size: small;
+    color: #777;
+}
+
+/* Call to Action */
+.k {
+    margin-left: 8%;
+    width: 85%;
+    margin-top: 20px;
+    padding: 20px;
+    background: #ff4d4d;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.k:hover {
+    background: #ff6a00;
+    transition: 0.3s ease-in-out;
+}
+
+.ab {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* Responsive Design */
+
+/* Tablets (Below 768px) */
+@media (max-width: 768px) {
+    .home-container {
+        width: 95%;
+    }
+
+    .H {
+        font-size: 45px;
+    }
+
+    .s, .t {
+        margin-left: 5%;
+    }
+
+    .j {
+        margin-left: 10%;
+    }
+
+    .k {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+/* Mobile Phones (Below 480px) */
+@media (max-width: 480px) {
+    .H {
+        font-size: 35px;
+    }
+
+    .s, .t {
+        font-size: 14px;
+    }
+
+    .i ul li {
+        font-size: 16px;
+    }
+
+    .j {
+        margin-left: 5%;
+    }
+
+    .k {
+        width: 100%;
+    }
+}

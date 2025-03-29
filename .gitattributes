@@ -1,0 +1,4 @@
+public/MathNotes.pdf filter=lfs diff=lfs merge=lfs -text
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
