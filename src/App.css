@@ -1,24 +1,21 @@
-/* General Styling */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-}
-
-/* Full-Width Navbar */
-.navbar {
+  }
+  
+  .navbar {
     width: 100%;
-    background: linear-gradient(90deg, #ff6a00, #ff4d4d); /* Gradient background */
+    background: linear-gradient(90deg, #ff6a00, #ff4d4d);
     position: sticky;
     top: 0;
     z-index: 1000;
     padding: 15px 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Navbar List */
-.navbar .A {
+  }
+  
+  .navbar .A {
     list-style: none;
     display: flex;
     align-items: center;
@@ -27,42 +24,39 @@ body {
     margin: 0;
     max-width: 1200px;
     margin: auto;
-}
-
-/* Navbar Items */
-.navbar .a {
+  }
+  
+  .navbar .a {
     display: inline-block;
     padding: 12px 20px;
-}
-
-.navbar .b {
+  }
+  
+  .navbar .b {
     text-decoration: none;
     color: white;
     font-size: 16px;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
-}
-
-.navbar .b:hover {
+  }
+  
+  .navbar .b:hover {
     color: rgb(11, 244, 27);
-}
-
-/* Logo */
-.navbar .logo {
-    width: 60px; /* Adjust logo size */
+  }
+  
+  .navbar .logo {
+    width: 60px;
     height: auto;
     margin-left: 20px;
     border-radius: 50%;
-}
-
-/* Curriculum Button */
-.cir {
+  }
+  
+  .cir {
     text-align: center;
     margin: 20px 0;
-}
-
-.circulum {
+  }
+  
+  .circulum {
     background-color: green;
     color: white;
     padding: 12px 20px;
@@ -70,42 +64,38 @@ body {
     font-weight: bold;
     border-radius: 5px;
     transition: 0.3s;
-}
-
-.circulum:hover {
+  }
+  
+  .circulum:hover {
     background-color: darkgreen;
     transform: scale(1.05);
-}
-
-/* Main Section */
-.mainsection {
+  }
+  
+  .mainsection {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-}
-
-/* Box Styles */
-.c, .e, .g {
+  }
+  
+  .c, .e, .g {
     background-color: rgb(103, 5, 223);
     color: white;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    width: 30%; /* Default width for laptops */
+    width: 30%;
     min-width: 200px;
     transition: 0.3s ease-in-out;
-}
-
-/* Hover Effect */
-.c:hover, .e:hover, .g:hover {
+  }
+  
+  .c:hover, .e:hover, .g:hover {
     background-color: #ff8c00;
     transform: scale(1.05);
-}
-
-/* Download Button */
-.d, .f {
+  }
+  
+  .d, .f {
     background-color: white;
     color: black;
     padding: 10px;
@@ -113,62 +103,60 @@ body {
     border-radius: 5px;
     font-weight: bold;
     transition: 0.3s ease-in-out;
-}
-
-.d:hover, .f:hover {
+  }
+  
+  .d:hover, .f:hover {
     background-color: gray;
     color: white;
     transform: scale(1.1);
-}
-
-/* Responsive Design */
-
-/* Tablets (Below 768px) */
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .mainsection {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
+  
     .c, .e, .g {
-        width: 80%;
+      width: 80%;
     }
-
+  
     .navbar .A {
-        flex-direction: column;
-        text-align: center;
+      flex-direction: column;
+      text-align: center;
     }
-
+  
     .navbar .logo {
-        margin-bottom: 10px;
+      margin-bottom: 10px;
     }
-}
-
-/* Mobile Phones (Below 480px) */
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     .c, .e, .g {
-        width: 95%;
+      width: 95%;
     }
-
+  
     .circulum {
-        font-size: 14px;
-        padding: 8px;
+      font-size: 14px;
+      padding: 8px;
     }
-
+  
     .d, .f {
-        padding: 8px;
-        font-size: 12px;
+      padding: 8px;
+      font-size: 12px;
     }
-
+  
     .navbar {
-        padding: 10px 0;
+      padding: 10px 0;
     }
-
+  
     .navbar .b {
-        font-size: 14px;
+      font-size: 14px;
     }
-
+  
     .navbar .logo {
-        width: 50px;
+      width: 50px;
     }
-}
+  }
+
+  

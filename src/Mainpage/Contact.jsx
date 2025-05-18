@@ -1,19 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 function Contact() {
   const navigate = useNavigate();
+  const formRef = useRef();
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-  
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Message sent successfully!');
-    setFormData({ name: '', email: '', message: '' });
+
+    emailjs.sendForm(
+      'service_66nfje7',         // ✅ Your actual EmailJS Service ID
+      'template_ec5fnse',        // ✅ Your actual EmailJS Template ID
+      formRef.current,
+      'BWwrcgX6fw3wdGi42'    // ✅ Your actual EmailJS Public Key
+    ).then(
+      (result) => {
+        console.log('SUCCESS!', result.text);
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      },
+      (error) => {
+        console.error('FAILED...', error);
+        alert('Failed to send message. Check the console for details.');
+      }
+    );
   };
 
   return (
@@ -29,8 +46,8 @@ function Contact() {
       <div className="contact-content">
         <h1>Contact Us</h1>
         <p>Have questions or feedback? Fill out the form below and we'll get back to you.</p>
-        
-        <form onSubmit={handleSubmit} className="contact-form">
+
+        <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
           <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
           <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required />
           <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} required />

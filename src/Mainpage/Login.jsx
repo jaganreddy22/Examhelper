@@ -4,41 +4,85 @@ import './Login.css';
 
 function Login() {
   const navigate = useNavigate();
-  const [isLogin, setIsLogin] = useState(true);
-  const [formData, setFormData] = useState({ email: '', password: '', name: '' });
+  const [formData, setFormData] = useState({ email: '', password: '' });
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert(isLogin ? 'Login Successful!' : 'Sign Up Successful!');
-    setFormData({ email: '', password: '', name: '' });
+
+    try {
+      const res = await fetch('http://localhost:5000/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) throw new Error(data.message || 'Login failed');
+
+      setMessage(data.message);
+      setError('');
+      localStorage.setItem('token', data.token);
+    } catch (err) {
+      setError(err.message || 'Something went wrong');
+      setMessage('');
+    }
   };
 
   return (
     <div className="auth-container">
       <nav className="navbar">
         <ul className="nav-links">
-          <li><a onClick={() => navigate('/')} className="nav-item">Home</a></li>
-          <li><a onClick={() => navigate('/about')} className="nav-item">About</a></li>
-          <li><a onClick={() => navigate('/contact')} className="nav-item">Contact</a></li>
+          <li><span className="nav-item" onClick={() => navigate('/')}>Home</span></li>
+          <li><span className="nav-item" onClick={() => navigate('/about')}>About</span></li>
+          <li><span className="nav-item" onClick={() => navigate('/contact')}>Contact</span></li>
         </ul>
       </nav>
 
       <div className="auth-box">
-        <div className="auth-tabs">
-          <span className={isLogin ? 'auth-tab active' : 'auth-tab'} onClick={() => setIsLogin(true)}>Login</span>
-          <span className={!isLogin ? 'auth-tab active' : 'auth-tab'} onClick={() => setIsLogin(false)}>Sign Up</span>
-        </div>
+        <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Login</h2>
 
         <form onSubmit={handleSubmit} className="auth-form">
-          {!isLogin && <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required={!isLogin} />}
-          <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required />
-          <input type="password" name="password" placeholder="Your Password" value={formData.password} onChange={handleChange} required />
-          <button type="submit" className="auth-btn">{isLogin ? 'Login' : 'Sign Up'}</button>
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Your Password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit" className="auth-btn">Login</button>
         </form>
+
+        {message && <p className="success-message">{message}</p>}
+        {error && <p className="error-message">{error}</p>}
+
+        <p>
+          Forgot your password?{' '}
+          <span onClick={() => navigate('/forgot')} style={{ color: 'blue', cursor: 'pointer' }}>
+            Reset here
+          </span>
+        </p>
+        <p>
+          Don’t have an account?{' '}
+          <span onClick={() => navigate('/signup')} style={{ color: 'blue', cursor: 'pointer' }}>
+            Sign Up
+          </span>
+        </p>
 
         <div className="social-login">
           <button className="social-btn google-btn">Sign in with Google</button>
