@@ -5,13 +5,42 @@ import './About.css';
 function About() {
   const navigate = useNavigate();
 
+  const handleNavigation = (e, path) => {
+    e.preventDefault();
+    navigate(path);
+  };
+
   return (
     <div className="about-container">
       <nav className="navbar">
         <ul className="nav-links">
-          <li><a onClick={() => navigate("/")} className="nav-item">Home</a></li>
-          <li><a className="nav-item active">About</a></li>
-          <li><a onClick={() => navigate("/contact")} className="nav-item">Contact</a></li>
+          <li>
+            <a
+              href="/"
+              onClick={(e) => handleNavigation(e, "/")}
+              className="nav-item"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="/about"
+              onClick={(e) => e.preventDefault()}
+              className="nav-item active"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact"
+              onClick={(e) => handleNavigation(e, "/contact")}
+              className="nav-item"
+            >
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -23,7 +52,7 @@ function About() {
           Whether you're preparing for mid-term exams, semester-end assessments, or looking for
           additional resources, our website has got you covered.
         </p>
-        
+
         <h2>Why Choose Us?</h2>
         <ul>
           <li>Access a collection of previous exam papers.</li>
@@ -40,7 +69,8 @@ function About() {
 
         <h2>Get in Touch</h2>
         <p>
-          Have questions or suggestions? Feel free to <a href="/contact" className="contact-link">contact us</a>.
+          Have questions or suggestions? Feel free to{' '}
+          <a href="/contact" className="contact-link">contact us</a>.
         </p>
       </div>
     </div>

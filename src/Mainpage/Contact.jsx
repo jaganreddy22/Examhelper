@@ -16,10 +16,10 @@ function Contact() {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_66nfje7',         // ✅ Your actual EmailJS Service ID
-      'template_ec5fnse',        // ✅ Your actual EmailJS Template ID
+      'service_66nfje7',         // ✅ Replace with your real EmailJS Service ID
+      'template_ec5fnse',        // ✅ Replace with your real Template ID
       formRef.current,
-      'BWwrcgX6fw3wdGi42'    // ✅ Your actual EmailJS Public Key
+      'BWwrcgX6fw3wdGi42'        // ✅ Replace with your real Public Key
     ).then(
       (result) => {
         console.log('SUCCESS!', result.text);
@@ -33,13 +33,42 @@ function Contact() {
     );
   };
 
+  const handleNavigation = (e, path) => {
+    e.preventDefault();
+    navigate(path);
+  };
+
   return (
     <div className="contact-container">
       <nav className="navbar">
         <ul className="nav-links">
-          <li><a onClick={() => navigate('/')} className="nav-item">Home</a></li>
-          <li><a onClick={() => navigate('/about')} className="nav-item">About</a></li>
-          <li><a className="nav-item active">Contact</a></li>
+          <li>
+            <a
+              href="/"
+              onClick={(e) => handleNavigation(e, '/')}
+              className="nav-item"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="/about"
+              onClick={(e) => handleNavigation(e, '/about')}
+              className="nav-item"
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact"
+              onClick={(e) => e.preventDefault()}
+              className="nav-item active"
+            >
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -48,9 +77,29 @@ function Contact() {
         <p>Have questions or feedback? Fill out the form below and we'll get back to you.</p>
 
         <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
-          <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} required />
-          <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} required />
-          <textarea name="message" placeholder="Your Message" value={formData.message} onChange={handleChange} required />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
           <button type="submit" className="submit-btn">Send Message</button>
         </form>
       </div>
