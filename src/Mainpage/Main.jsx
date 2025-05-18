@@ -15,21 +15,60 @@ function Main() {
               alt="Exam Helper"
             />
             <li className="a">
-              <a className="b" onClick={() => navigate("/Home")}>Home</a>
+              <a
+                className="b"
+                href="/Home"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/Home");
+                }}
+              >
+                Home
+              </a>
             </li>
             <li className="a">
-              <a className="b" onClick={() => navigate("/About")}>About</a>
+              <a
+                className="b"
+                href="/About"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/About");
+                }}
+              >
+                About
+              </a>
             </li>
             <li className="a">
-              <a className="b" onClick={() => navigate("/Contact")}>Contact Us</a>
+              <a
+                className="b"
+                href="/Contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/Contact");
+                }}
+              >
+                Contact Us
+              </a>
             </li>
             <li className="a">
-              <a className="b" onClick={() => navigate("/Login")}>Login</a>
+              <a
+                className="b"
+                href="/Login"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/Login");
+                }}
+              >
+                Login
+              </a>
             </li>
           </ul>
         </nav>
+
         <div className="cir">
-         <h1 > <span className='abb'>This Is for CSM Department</span></h1>
+          <h1>
+            <span className="abb">This Is for CSM Department</span>
+          </h1>
         </div>
 
         <div className="cir">
@@ -147,8 +186,11 @@ function Main() {
             </a>
           </div>
         </div>
+
         <div className="cir">
-         <h1 > <span className='abb'>This Is for CAI Department</span></h1>
+          <h1>
+            <span className="abb">This Is for CAI Department</span>
+          </h1>
         </div>
 
         <div className="cir">
