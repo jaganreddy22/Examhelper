@@ -1,316 +1,62 @@
+// App.jsx or Main.jsx (Flipkart-style layout with fixed nav and card spacing)
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { FaBook, FaDownload, FaUserAlt, FaHome, FaThList, FaGamepad, FaShoppingCart } from 'react-icons/fa';
 
-function Main() {
-  const navigate = useNavigate();
 
+const resources = [
+  { title: 'CSM 2-1 Mid 1 Papers', file: '/files/mid1.pdf' },
+  { title: 'CSM 2-1 Mid 2 Papers', file: '/files/mid2.pdf' },
+  { title: 'CSM 2-1 SEM Papers', file: '/files/sem.pdf' },
+  { title: 'MATH NOTES', file: '/files/math.pdf' },
+  { title: 'JAVA NOTES', file: '/files/java.pdf' },
+  { title: 'UHV NOTES', file: '/files/uhv.pdf' },
+  { title: 'ADSA NOTES', file: '/files/adsa.pdf' },
+  { title: 'AI NOTES', file: '/files/ai.pdf' },
+];
+
+const App = () => {
   return (
-    <div>
-      <div className="container">
-        <nav className="navbar">
-          <ul className="A">
-            <img
-              className="logo"
-              src={`${process.env.PUBLIC_URL}/examlogo.png`}
-              alt="Exam Helper"
-            />
-            <li className="a">
-              <a
-                className="b"
-                href="/Home"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigate("/Home");
-                }}
-              >
-                Home
-              </a>
-            </li>
-            <li className="a">
-              <a
-                className="b"
-                href="/About"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigate("/About");
-                }}
-              >
-                About
-              </a>
-            </li>
-            <li className="a">
-              <a
-                className="b"
-                href="/Contact"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigate("/Contact");
-                }}
-              >
-                Contact Us
-              </a>
-            </li>
-            <li className="a">
-              <a
-                className="b"
-                href="/Login"
-                onClick={(e) => {
-                  e.preventDefault();
-                  navigate("/Login");
-                }}
-              >
-                Login
-              </a>
-            </li>
-          </ul>
-        </nav>
+    <div className="app-container">
+      <header className="app-header">
+       
+        <ul className="nav-bar">
+           <img src="examlogo.png" alt="logo" className="logo" />
+          <li><a href="/" className="nav-link">Home</a></li>
+          <li><a href="/about" className="nav-link">About</a></li>
+          <li><a href="/contact" className="nav-link">Contact</a></li>
+          <li><a href="/login" className="nav-link">Login</a></li>
+        </ul>
+      </header>
 
-        <div className="cir">
-          <h1>
-            <span className="abb">This Is for CSM Department</span>
-          </h1>
-        </div>
+      <section className="section">
+        <h2>This is for CSM Department</h2>
+        <a className="download-btn" href="/files/R23.pdf" download>Click Here to Download R23 CSM Curriculum</a>
+      </section>
 
-        <div className="cir">
-          <a
-            className="circulum"
-            href={`${process.env.PUBLIC_URL}/R23 cir.pdf`}
-            download="R23 cir.pdf"
-          >
-            Click Here Download R23 CSM Circulum
-          </a>
-        </div>
-
-        <div className="mainsection">
-          <div className="e">
-            CSM 2-1 Mid 1 Papers
-            <br />
-            <br />
-            <a
-              className="f"
-              href={`${process.env.PUBLIC_URL}/csm mid1.pdf`}
-              download="CSM 2-1 mid1 Papers"
-            >
-              Download
-            </a>
+      <div className="card-grid">
+        {resources.map((item, index) => (
+          <div className="resource-card" key={index}>
+            <h3>{item.title}</h3>
+            <a href={item.file} className="resource-download" download>Download</a>
           </div>
+        ))}
+      </div>
 
-          <div className="g">
-            CSM 2-1 Mid 2 Papers
-            <br />
-            <br />
-            <a
-              className="f"
-              href={`${process.env.PUBLIC_URL}/csm mid2.pdf`}
-              download="CSM 2-1 mid2 Papers"
-            >
-              Download
-            </a>
+      <section className="section">
+        <h2>This is for CAI Department</h2>
+        <a className="download-btn" href="/files/R23.pdf" download>Click Here to Download R23 CAI Curriculum</a>
+      </section>
+
+      <div className="card-grid">
+        {resources.map((item, index) => (
+          <div className="resource-card" key={`cai-${index}`}> {/* unique key for CAI */}
+            <h3>{item.title.replace('CSM', 'CAI')}</h3>
+            <a href={item.file} className="resource-download" download>Download</a>
           </div>
-
-          <div className="c">
-            CSM 2-1 SEM Papers
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/QUESTIONS SEM1.pdf`}
-              download="CSM 2-1 QUESTION Papers"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            MATH NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/MATHNotes.pdf`}
-              download="Math Notes"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            JAVA NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/Java.pdf`}
-              download="Java Notes"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            UHV NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/UHv.notes.pdf`}
-              download="UHV Notes"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            ADSA NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/Adsanotes.pdf`}
-              download="ADSA Notes"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            AI NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/Ai notes.pdf`}
-              download="AI Notes"
-            >
-              Download
-            </a>
-          </div>
-        </div>
-
-        <div className="cir">
-          <h1>
-            <span className="abb">This Is for CAI Department</span>
-          </h1>
-        </div>
-
-        <div className="cir">
-          <a
-            className="circulum"
-            href={`${process.env.PUBLIC_URL}/R23 cir.pdf`}
-            download="R23 cir.pdf"
-          >
-            Click Here Download R23 CAI Circulum
-          </a>
-        </div>
-
-        <div className="mainsection">
-          <div className="e">
-            CAI 2-1 Mid 1 Papers
-            <br />
-            <br />
-            <a
-              className="f"
-              href={`${process.env.PUBLIC_URL}/csm mid1.pdf`}
-              download="CSM 2-1 mid1 Papers"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="g">
-            CAI 2-1 Mid 2 Papers
-            <br />
-            <br />
-            <a
-              className="f"
-              href={`${process.env.PUBLIC_URL}/csm mid2.pdf`}
-              download="CSM 2-1 mid2 Papers"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            CAI 2-1 SEM Papers
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/QUESTIONS SEM1.pdf`}
-              download="CSM 2-1 QUESTION Papers"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            MATH NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/MATHNotes.pdf`}
-              download="Math Notes"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            JAVA NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/Java.pdf`}
-              download="Java Notes"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            UHV NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/UHv.notes.pdf`}
-              download="UHV Notes"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            ADSA NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/Adsanotes.pdf`}
-              download="ADSA Notes"
-            >
-              Download
-            </a>
-          </div>
-
-          <div className="c">
-            AI NOTES
-            <br />
-            <br />
-            <a
-              className="d"
-              href={`${process.env.PUBLIC_URL}/Ai notes.pdf`}
-              download="AI Notes"
-            >
-              Download
-            </a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
-}
+};
 
-export default Main;
+export default App;

@@ -16,7 +16,7 @@ function Contact() {
     e.preventDefault();
 
     emailjs.sendForm(
-      'service_66nfje7',         // ✅ Replace with your real EmailJS Service ID
+      'service_66nfje7',        
       'template_ec5fnse',        // ✅ Replace with your real Template ID
       formRef.current,
       'BWwrcgX6fw3wdGi42'        // ✅ Replace with your real Public Key

@@ -1,0 +1,40 @@
+.dark-mode-toggle-btn {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: var(--card-bg);
+  color: var(--text);
+  cursor: pointer;
+  box-shadow: 0 2px 6px var(--card-glow);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Mobile view: smaller, round icon button */
+@media (max-width: 480px) {
+  .dark-mode-toggle-btn {
+    font-size: 0;          /* Hide text */
+    width: 26px;
+    height: 26px;
+    margin-right:0;
+    padding: 0;
+
+    border-radius: 50%;
+    justify-content: center;
+  }
+
+  .dark-mode-toggle-btn .btn-text {
+    display: none;         /* Hide text span */
+  }
+
+  .dark-mode-toggle-btn .icon {
+    font-size: 20px;       /* Show bigger icon */
+    line-height: 1;
+  }
+}

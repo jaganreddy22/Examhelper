@@ -1,0 +1,63 @@
+/* Scroll-to-top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s, bottom 0.3s ease-in-out;
+  z-index: 1001; /* Ensures visibility above other elements */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+}
+
+/* Visible state with slight bounce effect */
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-5px);
+}
+
+/* Hover effect */
+.scroll-to-top:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(0, 123, 255, 0.6);
+}
+
+/* Dark mode adjustments */
+.dark-mode .scroll-to-top {
+  background-color: #333; /* Darker background */
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Softer shadow */
+}
+
+/* Dynamic bottom spacing to avoid contact button */
+.scroll-to-top {
+  bottom: calc(40px + var(--contact-button-height, 20px));
+}
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+  .scroll-to-top {
+    bottom: 80px;  /* Increased to avoid bottom contact bar */
+    right: 15px;
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+    box-shadow: 0 3px 8px rgba(0, 123, 255, 0.35);
+  }
+
+  .scroll-to-top:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0, 123, 255, 0.5);
+  }
+}
