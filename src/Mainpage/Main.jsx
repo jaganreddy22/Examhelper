@@ -1,6 +1,6 @@
 // App.jsx or Main.jsx (Flipkart-style layout with fixed nav and card spacing)
 import React from 'react';
-import { FaBook, FaDownload, FaUserAlt, FaHome, FaThList, FaGamepad, FaShoppingCart } from 'react-icons/fa';
+
 
 
 const resources = [
