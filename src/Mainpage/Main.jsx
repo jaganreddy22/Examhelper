@@ -1,4 +1,4 @@
-// App.jsx or Main.jsx (Flipkart-style layout with fixed nav and card spacing)
+
 import React from 'react';
 
 

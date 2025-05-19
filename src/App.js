@@ -21,8 +21,10 @@ function App() {
       <DarkModeToggle /> {/* 🌙 Toggle */}
      
       <ScrollToTop />     {/* ✅ Scroll on route change */}
+      
 
       <Routes>
+       
         <Route path="/" element={<Main />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/About" element={<About />} />
