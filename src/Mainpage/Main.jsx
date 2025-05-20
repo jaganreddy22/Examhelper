@@ -12,6 +12,8 @@ const resources = [
   { title: 'UHV NOTES', file: '/files/uhv.pdf' },
   { title: 'ADSA NOTES', file: '/files/adsa.pdf' },
   { title: 'AI NOTES', file: '/files/ai.pdf' },
+  
+  { title: 'CSM 2-2 Mid 1 Papers', file: '/files/mid1.pdf' },
 ];
 
 const App = () => {
