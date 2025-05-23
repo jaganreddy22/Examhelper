@@ -1,0 +1,37 @@
+.branch-container {
+  text-align: center;
+  padding: 40px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.branch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.branch-card {
+  width: 180px;
+  height: 120px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.branch-card:hover {
+  transform: scale(1.05);
+  background-color: #e0f7fa;
+}

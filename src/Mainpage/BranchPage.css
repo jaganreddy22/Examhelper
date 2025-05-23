@@ -1,0 +1,162 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  background-color: #f0f0f0;
+}
+
+.app-header {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  padding: 14px 24px;
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 40px;
+  margin-right: auto;
+}
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #c8fffc;
+}
+
+
+.branch-page {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.branch-page h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+.curriculum-btn {
+  background-color: #00e676;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.curriculum-btn:hover {
+  background-color: #00c853;
+}
+
+/* ===== Resource Cards ===== */
+.resource-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.resource-card {
+  background: white;
+  width: 220px;
+  border-radius: 16px;
+  padding: 24px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.resource-card:hover {
+  transform: translateY(-6px);
+}
+
+.resource-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ===== Red Download Button ===== */
+.download-btn {
+  background-color: #ff3d3d;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #e53935;
+}
+
+/* ===== Select Notes/Papers Buttons ===== */
+.select-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.select-buttons button {
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.select-buttons button:hover {
+  background-color: #0097a7;
+}
+
+/* ===== Responsive Layout ===== */
+@media (max-width: 768px) {
+  .resource-grid,
+  .select-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resource-card {
+    width: 90%;
+  }
+
+  .select-buttons button {
+    width: 80%;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .nav-bar {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

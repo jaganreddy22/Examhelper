@@ -1,0 +1,137 @@
+/* ===== General Page Styling ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* ===== Navbar ===== */
+.app-header {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  padding: 14px 24px;
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 40px;
+  margin-right: auto;
+}
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #c8fffc;
+}
+
+/* ===== Page Content ===== */
+.branch-page {
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e9e9e9;
+}
+
+.branch-page h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+/* ===== Curriculum Button ===== */
+.curriculum-btn {
+  background-color: #00e676;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.curriculum-btn:hover {
+  background-color: #00c853;
+}
+
+/* ===== Card Grid ===== */
+.resource-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.resource-card {
+  background-color: white;
+  width: 220px;
+  border-radius: 16px;
+  padding: 24px 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+  transform: translateY(-6px);
+}
+
+.resource-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+/* ===== Red Download Button ===== */
+.download-btn {
+  background-color: #ff3d3d;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .resource-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resource-card {
+    width: 90%;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .nav-bar {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

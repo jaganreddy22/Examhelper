@@ -1,0 +1,27 @@
+.select-page {
+  text-align: center;
+  padding: 50px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.select-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.select-buttons button {
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.select-buttons button:hover {
+  background-color: #008c9e;
+}

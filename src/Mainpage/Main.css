@@ -1,0 +1,123 @@
+/* ===== Global Page and Font Setup ===== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  background: #e0e0e0; /* Soft gray full-page background */
+  min-height: 100vh;
+}
+
+/* ===== Sticky Header / Navbar ===== */
+.app-header {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  height: 40px;
+  margin-right: auto;
+}
+
+.nav-link {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #c8fffc;
+}
+
+/* ===== Branch Container Background ===== */
+.branch-container {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #f3f4f6, #e0e0e0);
+  min-height: calc(100vh - 70px); /* Adjust for header height */
+}
+
+/* ===== Title ===== */
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+/* ===== Branch Grid Layout ===== */
+.branch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* ===== Branch Card Base Style ===== */
+.branch-card {
+  width: 160px;
+  height: 100px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* ===== Individual Branch Colors ===== */
+.csm {
+  background-color: #ff7043; /* Orange */
+}
+
+.cai {
+  background-color: #42a5f5; /* Blue */
+}
+
+.cse {
+  background-color: #66bb6a; /* Green */
+}
+
+.branch-card:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .branch-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .branch-card {
+    width: 90%;
+    font-size: 18px;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .nav-bar {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
