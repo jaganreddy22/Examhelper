@@ -3,10 +3,18 @@ import { useNavigate } from 'react-router-dom';
 import './Main.css';
 
 const branches = [
-  { name: 'CSM', code: 'csm' },
-  { name: 'CAI', code: 'cai' },
-  { name: 'CSE', code: 'cse' },
-];
+  { name: '🖥️ CSM', code: 'csm' },
+  { name: '🖥️ CAI', code: 'cai' },
+  { name: '🖥️ CSE', code: 'cse' },
+  { name: '🖥️ CSD', code: 'csd' },
+  { name: '🖥️ CSC', code: 'csc' },
+  { name: '🖥️ CSBS', code: 'csbs' },
+  { name: '🖥️ IT', code: 'it' },
+  { name: '📡 ECE', code: 'ece' },
+  { name: '⚡ EEE', code: 'eee' },
+  { name: '🏗️ CIVIL', code: 'civil' },
+   { name: '🔧 MECH', code: 'mech' },
+]
 
 function Branches() {
   const navigate = useNavigate();
@@ -29,8 +37,8 @@ function Branches() {
           {branches.map(branch => (
             <div
               key={branch.code}
-              className={`branch-card ${branch.code}`}  // Add dynamic class
-              onClick={() => navigate(`/branch/${branch.code}`)}
+              className={`branch-card ${branch.code.toLowerCase()}`}
+              onClick={() => navigate(`/branch/${branch.code.toLowerCase()}`)}
             >
               {branch.name}
             </div>
