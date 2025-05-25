@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Main.css';
+import './BranchUi.css'
 
 const branches = [
   { name: '🖥️ CSM', code: 'csm' },

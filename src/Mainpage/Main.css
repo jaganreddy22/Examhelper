@@ -97,7 +97,7 @@ body {
 }
 
 .branch-name {
-  font-size: 42px;        /* 🔺 Increased font size */
+  font-size: 42px;
   font-weight: 900;
   letter-spacing: 1px;
   line-height: 1.2;
@@ -116,6 +116,7 @@ body {
 .civil  { background: linear-gradient(to bottom right, #ff416c, #ff4b2b); }
 .mech   { background: linear-gradient(to bottom right, #56ccf2, #2f80ed); }
 
+/* ===== Hover Effect ===== */
 .branch-card:hover {
   transform: scale(1.07);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
@@ -139,7 +140,7 @@ body {
   }
 
   .branch-name {
-    font-size: 42px;
+    font-size: 38px;
   }
 
   .title {
