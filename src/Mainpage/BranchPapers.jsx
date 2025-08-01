@@ -8,15 +8,17 @@ const papers = {
     { title: '2-1 Mid 2 Papers', file: '/files/csmmid1.pdf' },
     { title: '2-1 SEM Papers', file: '/files/csmsem.pdf' },
     { title: '2-2 Mid 1 Papers', file: '/files/csm2-2mid1.pdf' },
-     { title: '2-2 Mid 2 Papers', file: '/files/csm2-2mid2.pdf' }
+     { title: '2-2 Mid 2 Papers', file: '/files/csm2-2mid2.pdf' },
+     {title:'2-2  sem Papers',file:'/files/csm2-2sem.pdf'}
     
   ],
   cai: [
-    { title: '2-1 Mid 1 Papers', file: '/files/mid1.pdf' },
-    { title: '2-1 Mid 2 Papers', file: '/files/mid2.pdf' },
+    { title: '2-1 Mid 1 Papers', file: '/files/csmmid1.pdf' },
+    { title: '2-1 Mid 2 Papers', file: '/files/csmmid2.pdf' },
     { title: '2-1 SEM Papers', file: '/files/csmsem.pdf' },
     { title: '2-2 Mid 1 Papers', file: '/files/csm2-2mid1.pdf' },
-    { title: '2-2 Mid 2 Papers', file: '/files/csm2-2mid2.pdf' }
+    { title: '2-2 Mid 2 Papers', file: '/files/csm2-2mid2.pdf' },
+      {title:'2-2  sem Papers',file:'/files/csm2-2sem.pdf'}
   ],
   cse: [
     { title: '2-1 Mid 1 Papers', file: '/files/mid1.pdf' },
