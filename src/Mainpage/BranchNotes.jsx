@@ -6,17 +6,26 @@ import './BranchNotes.css';
 const notes = {
   csm: [
     { title: 'MATH NOTES', file: '/files/MathNotes.pdf' },
+     { title: 'AI NOTES', file: '/files/AI.pdf' },
     { title: 'JAVA NOTES', file: '/files/Java.pdf' },
     { title: 'UHV NOTES', file: '/files/Uhv.pdf' },
     { title: 'ADSA NOTES', file: '/files/Adsanotes.pdf' },
-    { title: 'AI NOTES', file: '/files/AI.pdf' },
+   
+    {title: 'DBMS NOTES', file: '/files/2-2notes/DBMS_Notes.pdf' },
+    {title: 'DLCO NOTES', file: '/files/2-2notes/DLCO_Notes.pdf' },
+    {title: 'Design Thinking', file: '/files/2-2notes/DTI_Notes.pdf' }
+
   ],
   cai: [
     { title: 'MATH NOTES', file: '/files/MathNotes.pdf' },
+     { title: 'AI NOTES', file: '/files/AI.pdf' },
     { title: 'JAVA NOTES', file: '/files/Java.pdf' },
     { title: 'UHV NOTES', file: '/files/Uhv.pdf' },
     { title: 'ADSA NOTES', file: '/files/Adsanotes.pdf' },
-    { title: 'AI NOTES', file: '/files/AI.pdf' },
+   
+    {title: 'DBMS NOTES', file: '/files/2-2notes/DBMS_Notes.pdf' },
+    {title: 'DLCO NOTES', file: '/files/2-2notes/DLCO_Notes.pdf' },
+    {title: 'Design Thinking', file: '/files/2-2notes/DTI_Notes.pdf' }
   ],
   cse: [
     { title: 'MATH NOTES', file: '/files/MathNotes.pdf' },
