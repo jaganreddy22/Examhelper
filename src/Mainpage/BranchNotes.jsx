@@ -13,7 +13,12 @@ const notes = {
     { title: 'ADSA NOTES', file: '/files/Adsanotes.pdf' },
     {title: 'DBMS NOTES', file: '/files/2-2notes/DBMS_Notes.pdf' },
     {title: 'DLCO NOTES', file: '/files/2-2notes/DLCO_Notes.pdf' },
-    {title: 'Design Thinking', file: '/files/2-2notes/DTI_Notes.pdf' }
+    {title: 'Design Thinking', file: '/files/2-2notes/DTI_Notes.pdf' },
+    {title: 'Natural Language processing', file: window.location.origin + '/files/NLPNotes.pdf' },
+    {title: 'Operating system&SP', file: '/files/OS&SPNotes.pdf' },
+    {title: 'Data Analysis', file: '/files/DataanalysisNotes.pdf' },
+    {title: 'Quantum Notes', file: '/files/QuantumNotes.pdf' },
+    {title: 'CVIP NOTES', file: '/files/CVIP Notes.pdf' },
 
   ],
   cai: [
@@ -25,14 +30,21 @@ const notes = {
    
     {title: 'DBMS NOTES', file: '/files/2-2notes/DBMS_Notes.pdf' },
     {title: 'DLCO NOTES', file: '/files/2-2notes/DLCO_Notes.pdf' },
-    {title: 'Design Thinking', file: '/files/2-2notes/DTI_Notes.pdf' }
+    {title: 'Design Thinking', file: '/files/2-2notes/DTI_Notes.pdf' },
+    {title: 'Natural Language processing', file: window.location.origin + '/files/NLPNotes.pdf' },
+    {title: 'Operating system&SP', file: '/files/OS&SPNotes.pdf' },
+    {title: 'Data Analysis', file: '/files/DataanalysisNotes.pdf' },
+    {title: 'Quantum Notes', file: '/files/QuantumNotes.pdf' },
+    {title: 'CVIP NOTES', file: '/files/CVIP Notes.pdf' },
   ],
   cse: [
+    {title: 'DBMS NOTES', file: '/files/2-2notes/DBMS_Notes.pdf' },
     { title: 'MATH NOTES', file: '/files/MathNotes.pdf' },
     { title: 'JAVA NOTES', file: '/files/Java.pdf' },
     { title: 'UHV NOTES', file: '/files/Uhv.pdf' },
     { title: 'ADSA NOTES', file: '/files/Adsanotes.pdf' },
-    { title: 'AI NOTES', file: '/files/AI.pdf' },
+    {title: 'Quantum Notes', file: '/files/QuantumNotes.pdf' },
+    {title: 'DLCO NOTES', file: '/files/2-2notes/DLCO_Notes.pdf' },
   ],
 };
 
